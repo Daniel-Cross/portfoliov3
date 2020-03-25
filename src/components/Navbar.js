@@ -12,6 +12,7 @@ const NavLink = styled.p`
   margin: 0;
   font-size: 12px;
   font-weight: 800;
+  letter-spacing: 0.2rem;
 `;
 
 const Navbar = props => {
