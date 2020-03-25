@@ -2,10 +2,11 @@ import React from "react";
 import Navbar from "./Navbar";
 import styled from "styled-components";
 import headshot from "../assets/headshot.jpg";
+import { Title, Subtitle } from "../constants/Theme";
 
 const HeaderContainer = styled.div`
-  background: #f2f2f2;
   height: 100vh;
+  background: transparent;
 `;
 
 const LogoContainer = styled.span`
@@ -17,24 +18,11 @@ const LogoContainer = styled.span`
   padding: 6rem 0 1rem 0;
 `;
 
-const HeroName = styled.h1`
-  padding: 4rem 1rem 0.5rem 1rem;
-  margin: 0;
-  font-weight: 400;
-  font-size: 2rem;
-  letter-spacing: 0.3rem;
-`;
-
-const HeroSub = styled.h2`
-  padding: 0.5rem 1rem 1rem 1rem;
-  margin: 0;
-  font-weight: 400;
-  font-size: 1.5rem;
-  letter-spacing: 0.3rem;
-`;
-
 const HeroDivide = styled.hr`
   width: 80%;
+  height: 2px;
+  border: 0;
+  background-color: #282c34;
 `;
 
 const HeroImage = styled.img`
@@ -50,8 +38,8 @@ const Header = () => {
         <Navbar />
         <LogoContainer>
           <HeroImage src={headshot} />
-          <HeroName>DANIEL CROSS</HeroName>
-          <HeroSub>SOFTWARE ENGINEER</HeroSub>
+          <Title>DANIEL CROSS</Title>
+          <Subtitle>SOFTWARE ENGINEER</Subtitle>
           <HeroDivide />
         </LogoContainer>
       </HeaderContainer>
