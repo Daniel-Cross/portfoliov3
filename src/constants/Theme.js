@@ -9,11 +9,11 @@ const size = {
 };
 
 export const device = {
-  mobileSm: `(min-width: ${size.xs})`,
-  mobileL: `(min-width: ${size.sm})`,
-  tablet: `(min-width: ${size.md})`,
-  laptop: `(min-width: ${size.lg})`,
-  desktop: `(min-width: ${size.xl})`
+  mobileSm: `@media (min-width: ${size.xs})`,
+  mobileL: `@media (min-width: ${size.sm})`,
+  tablet: `@media (min-width: ${size.md})`,
+  laptop: `@media (min-width: ${size.lg})`,
+  desktop: `@media (min-width: ${size.xl})`
 };
 
 export const Title = styled.h1`
