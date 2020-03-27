@@ -9,6 +9,7 @@ display: flex;
 flex-direction: column;
 justify-content: space-evenly;
 align-content; center;
+padding: 10rem 0 4rem 0;
 `;
 
 const Projects = () => {

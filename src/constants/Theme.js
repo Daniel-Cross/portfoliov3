@@ -22,6 +22,7 @@ export const Title = styled.h1`
   font-weight: 800;
   font-size: 2rem;
   letter-spacing: 0.3rem;
+  text-transform: uppercase;
 `;
 
 export const Subtitle = styled.h2`
@@ -31,4 +32,5 @@ export const Subtitle = styled.h2`
   font-weight: 800;
   font-size: 1.5rem;
   letter-spacing: 0.3rem;
+  text-transform: uppercase;
 `;
