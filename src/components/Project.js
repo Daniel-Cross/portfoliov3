@@ -18,15 +18,18 @@ const JobTitle = styled.h4`
 const MobileImg = styled.img`
   width: 95vw;
   ${device.mobileL} {
-width: 100%;}
-};
+    width: 50vw;
+  }
+  ${device.laptop} {
+    display: none;
+  }
 `;
 
 const DesktopImg = styled.img`
 display: none;
-${device.mobileL} {
+${device.laptop} {
   display: flex;
-width: 95vw;}
+  width: 80vw;}
 };
 `;
 
@@ -36,9 +39,13 @@ const JobSummary = styled.p`
   font-size: 15px;
   letter-spacing: 0.15px;
   font-weight: normal;
+
+  ${device.tablet} {
+    margin: 0 15%;
+  }
 `;
 
-const Project = ({ workplace, mobile, desktop, summary, link, tech }) => {
+const Project = ({ workplace, mobile, desktop, summary }) => {
   return (
     <JobContainer>
       <JobTitle>{workplace}</JobTitle>

@@ -1,11 +1,16 @@
 import React from "react";
 import styled from "styled-components";
 import { Subtitle } from "../constants/theme";
+import { device } from "../constants/theme";
 
 const AboutContainer = styled.div`
   background: rgb(225, 225, 225, 0.8);
   padding: 3rem 2rem 3rem 2rem;
   color: #282c34;
+
+  ${device.tablet} {
+    margin: 0 15%;
+  }
 `;
 
 const About = () => {
