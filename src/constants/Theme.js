@@ -59,7 +59,6 @@ export const lightTheme = {
 };
 
 export const GlobalStyles = createGlobalStyle`
-
 body, html {
 background: ${({ theme }) => theme.body};
 color: ${({ theme }) => theme.text};
@@ -70,6 +69,5 @@ font-family: "Raleway", sans-serif;
 -moz-osx-font-smoothing: grayscale;
 min-height: 100vh;
 scroll-behavior: smooth;
-transition: all 0.25s linear;
 }
 `;

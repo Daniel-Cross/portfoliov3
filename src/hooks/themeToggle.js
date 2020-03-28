@@ -4,9 +4,13 @@ export default () => {
   const [theme, setTheme] = useState("light");
 
   const toggleTheme = () => {
-    theme === "light"
-      ? window.localStorage.setItem("theme", "dark") && setTheme("dark")
-      : window.localStorage.setItem("theme", "light") && setTheme("light");
+    if (theme === "light") {
+      setTheme("dark");
+      window.localStorage.setItem("theme", "dark");
+    } else {
+      setTheme("light");
+      window.localStorage.setItem("theme", "light");
+    }
   };
 
   useEffect(() => {

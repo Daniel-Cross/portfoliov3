@@ -38,13 +38,15 @@ const NavLink = styled.a`
   }
 `;
 
-const Navbar = ({ setTheme }) => {
+const Navbar = ({ setTheme, theme }) => {
   return (
     <>
       <NavContainer>
         <NavLink href="#projects">PROJECTS</NavLink>
         <NavLink href="#social">SOCIAL</NavLink>
-        <button onClick={setTheme}>CLICK ME</button>
+        <NavLink onClick={setTheme}>
+          {theme && theme === "light" ? "DARK" : "LIGHT"}
+        </NavLink>
       </NavContainer>
     </>
   );
