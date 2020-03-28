@@ -14,7 +14,7 @@ padding: 10rem 0 4rem 0;
 
 const Projects = () => {
   return (
-    <ProjectsContainer>
+    <ProjectsContainer id="projects">
       <Subtitle>PROJECTS</Subtitle>
       {jobs &&
         jobs.length > 0 &&

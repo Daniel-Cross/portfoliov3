@@ -34,3 +34,16 @@ export const Subtitle = styled.h2`
   letter-spacing: 0.3rem;
   text-transform: uppercase;
 `;
+
+export const Link = styled.a`
+  color: #282c34;
+  text-decoration: none;
+
+  :visited {
+    color: #282c34;
+  }
+
+  :hover {
+    pointer: cursor;
+  }
+`;

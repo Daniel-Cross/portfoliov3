@@ -12,8 +12,7 @@ export const jobs = [
     imgMobile: skiddleMobile,
     imgDesktop: "",
     summary:
-      "Responsible for the development of the new promoters portal at the App Stores most downloaded ticketing service. A tired looking web portal, built previously using PHP, required modernising and new functionality. The application was rebuilt from the ground up using the latest version of React, with Hooks, styled-components and Jest.",
-    tech: []
+      "Responsible for the development of the new promoters portal at the App Stores most downloaded ticketing service. A tired looking web portal, built previously using PHP, required modernising and new functionality. The application was rebuilt from the ground up using the latest version of React, with Hooks, styled-components and Jest."
   },
 
   {
