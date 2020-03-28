@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { Subtitle } from "../constants/Theme";
-import { jobs } from "../constants/JobData";
+import { Subtitle } from "../constants/theme";
+import { jobs } from "../constants/jobData";
 import Project from "./Project";
 
 const ProjectsContainer = styled.div`

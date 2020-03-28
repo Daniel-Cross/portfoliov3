@@ -3,23 +3,20 @@ import Header from "./components/Header";
 import About from "./components/About";
 import Projects from "./components/Projects";
 import Footer from "./components/Footer";
-import useDarkMode from "./hooks/useDarkMode";
-import styled from "styled-components";
-
-const AppContainer = styled.div`
-  background: ${({ theme }) => (theme === "dark" ? `#000` : `#fff`)};
-`;
+import { ThemeProvider } from "styled-components";
+import { GlobalStyles, lightTheme, darkTheme } from "./constants/theme";
+import themeToggle from "./hooks/themeToggle";
 
 function App() {
-  const [theme] = useDarkMode();
+  const [theme, setTheme] = themeToggle();
   return (
-    <AppContainer>
-      {theme}
-      <Header />
+    <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
+      <GlobalStyles />
+      <Header setTheme={setTheme} theme={theme} />
       <About />
       <Projects />
       <Footer />
-    </AppContainer>
+    </ThemeProvider>
   );
 }
 

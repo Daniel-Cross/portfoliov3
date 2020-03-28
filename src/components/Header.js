@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "./Navbar";
 import styled from "styled-components";
 import headshot from "../assets/headshot.jpg";
-import { Title, Subtitle } from "../constants/Theme";
+import { Title, Subtitle } from "../constants/theme";
 
 const HeaderContainer = styled.div`
   height: 100vh;
@@ -22,7 +22,7 @@ const HeroDivide = styled.hr`
   width: 80%;
   height: 2px;
   border: 0;
-  background-color: #282c34;
+  background-color: ${({ theme }) => theme.text};
 `;
 
 const HeroImage = styled.img`
@@ -31,11 +31,11 @@ const HeroImage = styled.img`
   border-radius: 50%;
 `;
 
-const Header = () => {
+const Header = props => {
   return (
     <>
       <HeaderContainer>
-        <Navbar />
+        <Navbar {...props} />
         <LogoContainer>
           <HeroImage src={headshot} />
           <Title>DANIEL CROSS</Title>

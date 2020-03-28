@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import useDarkMode from "../hooks/useDarkMode";
 
 const NavContainer = styled.span`
   display: flex;
@@ -10,12 +9,12 @@ const NavContainer = styled.span`
 
 const NavLink = styled.a`
   padding: 0 0 3px 0;
+  color: ${({ theme }) => theme.text};
   margin: 10px;
   font-size: 12px;
   font-weight: 800;
   letter-spacing: 0.2rem;
   position: relative;
-  color: #282c34;
   text-decoration: none;
   :after,
   active {
@@ -37,20 +36,15 @@ const NavLink = styled.a`
     width: 100%;
     left: 0;
   }
-
-  :visited {
-    color: #282c34;
-  }
 `;
 
-const Navbar = () => {
-  const [theme, toggleTheme] = useDarkMode();
+const Navbar = ({ setTheme }) => {
   return (
     <>
       <NavContainer>
         <NavLink href="#projects">PROJECTS</NavLink>
         <NavLink href="#social">SOCIAL</NavLink>
-        <button onClick={toggleTheme}>CLICK</button>
+        <button onClick={setTheme}>CLICK ME</button>
       </NavContainer>
     </>
   );

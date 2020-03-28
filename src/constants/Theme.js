@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
 
 const size = {
   xs: "0px",
@@ -46,4 +46,30 @@ export const Link = styled.a`
   :hover {
     pointer: cursor;
   }
+`;
+
+export const darkTheme = {
+  body: "#282c34",
+  text: "#f2f2f2"
+};
+
+export const lightTheme = {
+  body: "#f2f2f2",
+  text: "#282c34"
+};
+
+export const GlobalStyles = createGlobalStyle`
+
+body, html {
+background: ${({ theme }) => theme.body};
+color: ${({ theme }) => theme.text};
+margin: 0;
+padding: 0;
+font-family: "Raleway", sans-serif;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+min-height: 100vh;
+scroll-behavior: smooth;
+transition: all 0.25s linear;
+}
 `;
