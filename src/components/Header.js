@@ -3,6 +3,7 @@ import Navbar from "./Navbar";
 import styled from "styled-components";
 import headshot from "../assets/headshot.jpg";
 import { Title, Subtitle } from "../constants/theme";
+import { device } from "../constants/theme";
 
 const HeaderContainer = styled.div`
   height: 100vh;
@@ -23,7 +24,15 @@ const HeroDivide = styled.hr`
   height: 2px;
   border: 0;
   background-color: ${({ theme }) => theme.text};
-`;
+
+  ${device.tablet} {
+    width: 60%;}
+  };
+
+  ${device.laptop} {
+    width: 40%;}
+  };
+  `;
 
 const HeroImage = styled.img`
   height: 15em;
