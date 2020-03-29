@@ -1,15 +1,15 @@
 import intouchMobile from "../assets/intouchMobile.png";
-import intouchDesktop from "../assets/intouchDesktop.jpg";
+import intouchDesktop from "../assets/intouchDesktop.png";
 import skiddleMobile from "../assets/skiddleMobile.png";
-import skiddleDesktop from "../assets/skiddleDesktop.jpg";
+import skiddleDesktop from "../assets/skiddleDesktop.png";
 import bookingMobile from "../assets/bookingMobile.png";
-import bookingDesktop from "../assets/bookingDesktop.jpg";
+import bookingDesktop from "../assets/bookingDesktop.png";
 import degreeMobile from "../assets/degreeMobile.png";
-import degreeDesktop from "../assets/degreeDesktop.jpg";
+import degreeDesktop from "../assets/degreeDesktop.png";
 import keggyMobile from "../assets/keggyMobile.png";
-import keggyDesktop from "../assets/keggyDesktop.jpg";
+import keggyDesktop from "../assets/keggyDesktop.png";
 import codesMobile from "../assets/codesMobile.png";
-import codesDesktop from "../assets/codesDesktop.jpg";
+import codesDesktop from "../assets/codesDesktop.png";
 
 export const jobs = [
   {

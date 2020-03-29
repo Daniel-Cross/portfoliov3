@@ -8,6 +8,10 @@ const JobContainer = styled.div`
   justify-content: center;
   align-items: center;
   margin: 4rem 2rem 2rem 2rem;
+
+  ${device.desktop} {
+    flex-direction: row;
+  }
 `;
 
 const JobTitle = styled.h4`
@@ -31,6 +35,10 @@ ${device.laptop} {
   display: flex;
   width: 80vw;}
 };
+
+${device.desktop} {
+  width: 45vw;
+}
 `;
 
 const JobSummary = styled.p`
