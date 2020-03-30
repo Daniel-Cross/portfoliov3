@@ -25,7 +25,7 @@ export const jobs = [
     imgMobile: intouchMobile,
     imgDesktop: intouchDesktop,
     summary:
-      "During my time at InTouch Networks we completed a huge overhaul of the members portal from a tired, dated look to a more modern and sleek looking website with added functionality such as podcast playback, a forum, blog integration with a headless CMS and a members search function. All work done in React, TypeScript, Mocha and Test Cafe"
+      "During my time at InTouch Networks we completed a huge overhaul of the members portal from a tired, dated look to a more modern and sleek looking website with added functionality such as podcast playback, a forum, blog integration with a headless CMS and a members search function. All work done in React, TypeScript, Mocha and Test Cafe."
   },
 
   {
@@ -41,7 +41,7 @@ export const jobs = [
     imgMobile: degreeMobile,
     imgDesktop: degreeDesktop,
     summary:
-      "Worked within the team responsible for building and maintaining the companies IP of white label gambling software. Technologies worked with were React, TypeScript and Jest"
+      "Worked within the team responsible for building and maintaining the companies IP of white label gambling software. Technologies worked with were React, TypeScript and Jest."
   },
 
   {

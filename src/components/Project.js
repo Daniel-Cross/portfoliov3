@@ -8,10 +8,6 @@ const JobContainer = styled.div`
   justify-content: center;
   align-items: center;
   margin: 4rem 2rem 2rem 2rem;
-
-  ${device.desktop} {
-    flex-direction: row;
-  }
 `;
 
 const JobTitle = styled.h4`
@@ -51,17 +47,37 @@ const JobSummary = styled.p`
   ${device.tablet} {
     margin: 0 15%;
   }
+
+  ${device.desktop} {
+    margin: 0 10%;
+  }
+`;
+
+const SummaryContainer = styled.span`
+  ${device.desktop} {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: no-wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    :nth-child(odd) {
+      flex-direction: row-reverse;
+    }
+  }
 `;
 
 const Project = ({ workplace, mobile, desktop, summary }) => {
   return (
     <JobContainer>
       <JobTitle>{workplace}</JobTitle>
-      {mobile && mobile.length > 0 && <MobileImg src={mobile} alt="mobile" />}
-      {desktop && desktop.length > 0 && (
-        <DesktopImg src={desktop} alt="desktop" />
-      )}
-      <JobSummary>{summary}</JobSummary>
+      <SummaryContainer>
+        {mobile && mobile.length > 0 && <MobileImg src={mobile} alt="mobile" />}
+        {desktop && desktop.length > 0 && (
+          <DesktopImg src={desktop} alt="desktop" />
+        )}
+        <JobSummary>{summary}</JobSummary>
+      </SummaryContainer>
     </JobContainer>
   );
 };
