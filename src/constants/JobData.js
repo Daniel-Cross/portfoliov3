@@ -36,7 +36,7 @@ export const jobs = [
     imgMobile: bookingMobile,
     imgDesktop: bookingDesktop,
     summary:
-      "Worked within a team responsible for the North American renal car market at Booking.com/Rental Cars. I was hired to work on rewriting the old Java codebase into a sleeker React application. Predominantly worked with React and Jest."
+      "Worked within a team responsible for the North American rental car market at Booking.com/Rental Cars. I was hired to work on rewriting the old Java codebase into a sleeker React application. Predominantly worked with React and Jest."
   },
 
   {
