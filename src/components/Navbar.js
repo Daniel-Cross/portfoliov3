@@ -25,7 +25,7 @@ const NavLink = styled.a`
     height: 2px;
     left: 50%;
     position: absolute;
-    background: #282c34;
+    background: ${({ theme }) => theme.text};
     transition: width 0.3s ease 0s, left 0.3s ease 0s;
     width: 0;
   }
