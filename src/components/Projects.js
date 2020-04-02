@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Subtitle } from "../constants/theme";
 import { jobs } from "../constants/jobData";
 import Project from "./Project";
+import { device } from "../constants/theme";
 
 const ProjectsContainer = styled.div`
 display: flex;
@@ -10,6 +11,10 @@ flex-direction: column;
 justify-content: space-evenly;
 align-content; center;
 padding: 10rem 0 4rem 0;
+
+${device.desktop} {
+  margin: 5% 0 0 0;
+}
 `;
 
 const Projects = () => {

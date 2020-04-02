@@ -8,6 +8,10 @@ const JobContainer = styled.div`
   justify-content: center;
   align-items: center;
   margin: 4rem 2rem 2rem 2rem;
+
+  ${device.desktop} {
+    margin: 8% 0 0 0;
+  }
 `;
 
 const JobTitle = styled.h4`
@@ -62,6 +66,7 @@ const SummaryContainer = styled.span`
   ${device.desktop} {
     flex-direction: ${({ index }) => (index % 2 ? "row" : "row-reverse")};
     justify-content: space-between;
+    margin: 3% 0 0 0;
   }
 `;
 
