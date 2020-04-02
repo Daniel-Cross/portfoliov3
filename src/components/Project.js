@@ -54,24 +54,22 @@ const JobSummary = styled.p`
 `;
 
 const SummaryContainer = styled.span`
-  ${device.desktop} {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: no-wrap;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-    :nth-child(odd) {
-      flex-direction: row-reverse;
-    }
+  ${device.desktop} {
+    flex-direction: ${({ index }) => (index % 2 ? "row" : "row-reverse")};
+    justify-content: space-between;
   }
 `;
 
-const Project = ({ workplace, mobile, desktop, summary }) => {
+const Project = ({ workplace, mobile, desktop, summary, index }) => {
   return (
     <JobContainer>
       <JobTitle>{workplace}</JobTitle>
-      <SummaryContainer>
+      <SummaryContainer index={index}>
         {mobile && mobile.length > 0 && <MobileImg src={mobile} alt="mobile" />}
         {desktop && desktop.length > 0 && (
           <DesktopImg src={desktop} alt="desktop" />

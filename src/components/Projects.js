@@ -20,6 +20,7 @@ const Projects = () => {
         jobs.length > 0 &&
         jobs.map(job => (
           <Project
+            index={job.index}
             key={job.workplace}
             workplace={job.workplace.toUpperCase()}
             mobile={job.imgMobile}

@@ -13,6 +13,7 @@ import codesDesktop from "../assets/codesDesktop.png";
 
 export const jobs = [
   {
+    index: "1",
     workplace: "Skiddle",
     imgMobile: skiddleMobile,
     imgDesktop: skiddleDesktop,
@@ -21,6 +22,7 @@ export const jobs = [
   },
 
   {
+    index: "2",
     workplace: "InTouch Networks",
     imgMobile: intouchMobile,
     imgDesktop: intouchDesktop,
@@ -29,6 +31,7 @@ export const jobs = [
   },
 
   {
+    index: "3",
     workplace: "Booking.com",
     imgMobile: bookingMobile,
     imgDesktop: bookingDesktop,
@@ -37,6 +40,7 @@ export const jobs = [
   },
 
   {
+    index: "4",
     workplace: "Degree 53",
     imgMobile: degreeMobile,
     imgDesktop: degreeDesktop,
@@ -45,6 +49,7 @@ export const jobs = [
   },
 
   {
+    index: "5",
     workplace: "Manchester Codes",
     imgMobile: codesMobile,
     imgDesktop: codesDesktop,
@@ -53,6 +58,7 @@ export const jobs = [
   },
 
   {
+    index: "6",
     workplace: "Super Kevin Keegan",
     imgMobile: keggyMobile,
     imgDesktop: keggyDesktop,
