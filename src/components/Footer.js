@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Link } from "../constants/Theme";
+import { Link } from "../constants/theme";
 
 const FooterContainer = styled.div`
   background: rgb(225, 225, 225, 0.8);

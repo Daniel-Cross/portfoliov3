@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "./Navbar";
 import styled from "styled-components";
 import avatarHeadshot from "../assets/avatarHeadshot.jpg";
-import { Title, Subtitle, device } from "../constants/Theme";
+import { Title, Subtitle, device } from "../constants/theme";
 
 const HeaderContainer = styled.div`
   height: 100vh;

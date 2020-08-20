@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Subtitle, device } from "../constants/Theme";
+import { Subtitle, device } from "../constants/theme";
 
 const AboutContainer = styled.div`
   background: rgb(225, 225, 225, 0.8);

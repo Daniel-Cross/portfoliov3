@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { device } from "../constants/Theme";
+import { device } from "../constants/theme";
 
 const JobContainer = styled.div`
   display: flex;
