@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "./Navbar";
 import styled from "styled-components";
-import headshot from "../assets/headshot.jpg";
+import avatarHeadshot from "../assets/avatarHeadshot.jpg";
 import { Title, Subtitle } from "../constants/theme";
 import { device } from "../constants/theme";
 
@@ -40,13 +40,13 @@ const HeroImage = styled.img`
   border-radius: 50%;
 `;
 
-const Header = props => {
+const Header = (props) => {
   return (
     <>
       <HeaderContainer>
         <Navbar {...props} />
         <LogoContainer>
-          <HeroImage src={headshot} />
+          <HeroImage src={avatarHeadshot} />
           <Title>DANIEL CROSS</Title>
           <Subtitle>SOFTWARE ENGINEER</Subtitle>
           <HeroDivide />
