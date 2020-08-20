@@ -1,9 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import { Subtitle } from "../constants/theme";
-import { jobs } from "../constants/jobData";
+import { Subtitle, device } from "../constants/Theme";
+import { jobs } from "../constants/JobData";
 import Project from "./Project";
-import { device } from "../constants/theme";
 
 const ProjectsContainer = styled.div`
 display: flex;
@@ -23,7 +22,7 @@ const Projects = () => {
       <Subtitle>PROJECTS</Subtitle>
       {jobs &&
         jobs.length > 0 &&
-        jobs.map(job => (
+        jobs.map((job) => (
           <Project
             index={job.index}
             key={job.workplace}

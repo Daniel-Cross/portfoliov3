@@ -4,7 +4,7 @@ import About from "./components/About";
 import Projects from "./components/Projects";
 import Footer from "./components/Footer";
 import { ThemeProvider } from "styled-components";
-import { GlobalStyles, lightTheme, darkTheme } from "./constants/theme";
+import { GlobalStyles, lightTheme, darkTheme } from "./constants/Theme";
 import themeToggle from "./hooks/themeToggle";
 
 function App() {

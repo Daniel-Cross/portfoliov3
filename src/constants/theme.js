@@ -5,7 +5,7 @@ const size = {
   sm: "480px",
   md: "768px",
   lg: "992px",
-  xl: "1200px"
+  xl: "1200px",
 };
 
 export const device = {
@@ -13,7 +13,7 @@ export const device = {
   mobileL: `@media (min-width: ${size.sm})`,
   tablet: `@media (min-width: ${size.md})`,
   laptop: `@media (min-width: ${size.lg})`,
-  desktop: `@media (min-width: ${size.xl})`
+  desktop: `@media (min-width: ${size.xl})`,
 };
 
 export const Title = styled.h1`
@@ -50,12 +50,12 @@ export const Link = styled.a`
 
 export const darkTheme = {
   body: "#282c34",
-  text: "#f2f2f2"
+  text: "#f2f2f2",
 };
 
 export const lightTheme = {
   body: "#f2f2f2",
-  text: "#282c34"
+  text: "#282c34",
 };
 
 export const GlobalStyles = createGlobalStyle`
