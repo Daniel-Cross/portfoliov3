@@ -26,7 +26,7 @@ export const Title = styled.h1`
 `;
 
 export const Subtitle = styled.h2`
-  padding: 0.5rem 1rem 1rem 1rem;
+  padding: 0 1rem 1rem 1rem;
   margin: 0;
   text-align: center;
   font-weight: 800;
@@ -36,11 +36,12 @@ export const Subtitle = styled.h2`
 `;
 
 export const Link = styled.a`
-  color: #282c34;
+  color: ${({ colour }) => (colour === "dark" ? colours.light : colours.dark)};
   text-decoration: none;
 
   :visited {
-    color: #282c34;
+    color: ${({ colour }) =>
+      colour === "dark" ? colours.light : colours.dark};
   }
 
   :hover {
@@ -48,26 +49,21 @@ export const Link = styled.a`
   }
 `;
 
-export const darkTheme = {
-  body: "#282c34",
-  text: "#f2f2f2",
-};
-
-export const lightTheme = {
-  body: "#f2f2f2",
-  text: "#282c34",
+export const colours = {
+  dark: "#282c34",
+  light: "#f2f2f2",
 };
 
 export const GlobalStyles = createGlobalStyle`
 body, html {
-background: ${({ theme }) => theme.body};
-color: ${({ theme }) => theme.text};
+background: #f2f2f2;
+color: #282c34;
+width: 100vw;
 margin: 0;
 padding: 0;
 font-family: "Raleway", sans-serif;
 -webkit-font-smoothing: antialiased;
 -moz-osx-font-smoothing: grayscale;
-min-height: 100vh;
 scroll-behavior: smooth;
 }
 `;

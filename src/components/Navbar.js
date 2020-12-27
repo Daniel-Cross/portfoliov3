@@ -1,15 +1,20 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
+import Socials from "./Socials";
+import { colours } from "../constants/theme";
 
 const NavContainer = styled.span`
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  margin: 20px 50px 0;
+  min-width: 93%;
 `;
 
-const NavLink = styled.a`
+const NavLink = styled(Link)`
   padding: 0 0 3px 0;
-  color: ${({ theme }) => theme.text};
+  color: ${({ colour }) => (colour === "dark" ? colours.light : colours.dark)};
   margin: 10px;
   font-size: 12px;
   font-weight: 800;
@@ -25,7 +30,9 @@ const NavLink = styled.a`
     height: 2px;
     left: 50%;
     position: absolute;
-    background: ${({ theme }) => theme.text};
+    background: ${({ colour }) =>
+      colour === "dark" ? colours.light : colours.dark};
+
     transition: width 0.3s ease 0s, left 0.3s ease 0s;
     width: 0;
   }
@@ -38,15 +45,20 @@ const NavLink = styled.a`
   }
 `;
 
-const Navbar = ({ setTheme, theme }) => {
+const Navbar = ({ colour }) => {
   return (
     <>
       <NavContainer>
-        <NavLink href="#projects">PROJECTS</NavLink>
-        <NavLink href="#social">SOCIAL</NavLink>
-        <NavLink onClick={setTheme}>
-          {theme && theme === "light" ? "DARK" : "LIGHT"}
-        </NavLink>
+        <Socials colour={colour} />
+        {colour === "dark" ? (
+          <NavLink colour={colour} to="/">
+            SUMMARY
+          </NavLink>
+        ) : (
+          <NavLink colour={colour} to="/experience">
+            EXPERIENCE
+          </NavLink>
+        )}
       </NavContainer>
     </>
   );

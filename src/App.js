@@ -1,22 +1,20 @@
 import React from "react";
 import Header from "./components/Header";
-import About from "./components/About";
-import Projects from "./components/Projects";
-import Footer from "./components/Footer";
-import { ThemeProvider } from "styled-components";
-import { GlobalStyles, lightTheme, darkTheme } from "./constants/theme";
-import themeToggle from "./hooks/themeToggle";
+import Experience from "./components/Experience";
+import { GlobalStyles } from "./constants/theme";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Test from "./Test";
 
 function App() {
-  const [theme, setTheme] = themeToggle();
   return (
-    <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
+    <Router>
       <GlobalStyles />
-      <Header setTheme={setTheme} theme={theme} />
-      <About />
-      <Projects />
-      <Footer />
-    </ThemeProvider>
+      <Navbar />
+      <Route exact path="/" component={Header} />
+      <Route exact path="/experience" component={Experience} />
+      <Route exact path="/test" component={Test} />
+    </Router>
   );
 }
 

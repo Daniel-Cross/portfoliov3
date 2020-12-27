@@ -4,8 +4,6 @@ import skiddleMobile from "../assets/skiddleMobile.png";
 import skiddleDesktop from "../assets/skiddleDesktop.png";
 import bookingMobile from "../assets/bookingMobile.png";
 import bookingDesktop from "../assets/bookingDesktop.png";
-import degreeMobile from "../assets/degreeMobile.png";
-import degreeDesktop from "../assets/degreeDesktop.png";
 import keggyMobile from "../assets/keggyMobile.png";
 import keggyDesktop from "../assets/keggyDesktop.png";
 import codesMobile from "../assets/codesMobile.png";
@@ -19,6 +17,13 @@ export const jobs = [
     imgDesktop: skiddleDesktop,
     summary:
       "Responsible for the development of the new promoters portal at the App Stores most downloaded ticketing service. A tired looking web portal, built previously using PHP, required modernising and new functionality. The application was rebuilt from the ground up using the latest version of React, with Hooks, styled-components and Jest.",
+    tech: [
+      "React",
+      "Styled Components",
+      "Test Driven Development",
+      "React Testing Library",
+      "Chai",
+    ],
   },
 
   {
@@ -41,15 +46,6 @@ export const jobs = [
 
   {
     index: "4",
-    workplace: "Degree 53",
-    imgMobile: degreeMobile,
-    imgDesktop: degreeDesktop,
-    summary:
-      "Worked within the team responsible for building and maintaining the companies IP of white label gambling software. Technologies worked with were React, TypeScript and Jest.",
-  },
-
-  {
-    index: "5",
     workplace: "Manchester Codes",
     imgMobile: codesMobile,
     imgDesktop: codesDesktop,
@@ -58,7 +54,7 @@ export const jobs = [
   },
 
   {
-    index: "6",
+    index: "5",
     workplace: "Super Kevin Keegan",
     imgMobile: keggyMobile,
     imgDesktop: keggyDesktop,

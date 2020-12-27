@@ -1,17 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 import { device } from "../constants/theme";
+import Fade from "react-reveal/Fade";
 
 const JobContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 4rem 2rem 2rem 2rem;
-
-  ${device.desktop} {
-    margin: 8% 0 0 0;
-  }
+  margin: 0 2rem 2rem 2rem;
 `;
 
 const JobTitle = styled.h4`
@@ -70,18 +67,30 @@ const SummaryContainer = styled.span`
   }
 `;
 
-const Project = ({ workplace, mobile, desktop, summary, index }) => {
+const Project = ({ jobs }) => {
   return (
-    <JobContainer>
-      <JobTitle>{workplace}</JobTitle>
-      <SummaryContainer index={index}>
-        {mobile && mobile.length > 0 && <MobileImg src={mobile} alt="mobile" />}
-        {desktop && desktop.length > 0 && (
-          <DesktopImg src={desktop} alt="desktop" />
-        )}
-        <JobSummary>{summary}</JobSummary>
-      </SummaryContainer>
-    </JobContainer>
+    <>
+      <Fade bottom delay={500} duration={2000}>
+      {jobs &&
+        jobs.length > 0 &&
+        jobs.map((job, index) => (
+          <>
+            <JobContainer>
+              <JobTitle>{job.workplace}</JobTitle>
+              <SummaryContainer index={index}>
+                {job.imgMobile && job.imgMobile.length > 0 && (
+                  <MobileImg src={job.imgMobile} alt="mobile" />
+                )}
+                {job.imgDesktop && job.imgDesktop.length > 0 && (
+                  <DesktopImg src={job.imgDesktop} alt="desktop" />
+                )}
+                <JobSummary>{job.summary}</JobSummary>
+              </SummaryContainer>
+            </JobContainer>
+          </>
+        ))}
+      </Fade>
+    </>
   );
 };
 
